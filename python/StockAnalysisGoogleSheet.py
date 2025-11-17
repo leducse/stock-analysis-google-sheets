@@ -349,21 +349,21 @@ if __name__ == '__main__':
             stock_data_list.append(stock_data)
             
             if stock_data['error']:
-                print(f"❌ Error: {stock_data['error'][:50]}")
+                print(f"Error: {stock_data['error'][:50]}")
                 time.sleep(DELAY_ON_ERROR)
             else:
-                buy = "🟢 BUY" if stock_data['buy_opportunity'] == "YES" else ""
-                sell = "🔴 SELL" if stock_data['sell_opportunity'] == "YES" else ""
+                buy = "BUY" if stock_data['buy_opportunity'] == "YES" else ""
+                sell = "SELL" if stock_data['sell_opportunity'] == "YES" else ""
                 signal = f"{buy} {sell}".strip()
-                print(f"✅ RSI: {stock_data['rsi']:.2f} {signal}" if stock_data['rsi'] else "✅")
+                print(f"RSI: {stock_data['rsi']:.2f} {signal}" if stock_data['rsi'] else "Success")
                 
         except Exception as e:
             error_msg = str(e)
             if "429" in error_msg or "rate limit" in error_msg.lower() or "too many requests" in error_msg.lower():
-                print(f"⚠️ Rate limited. Waiting {DELAY_ON_RATE_LIMIT}s...")
+                print(f"Rate limited. Waiting {DELAY_ON_RATE_LIMIT}s...")
                 time.sleep(DELAY_ON_RATE_LIMIT)
             else:
-                print(f"❌ Error: {error_msg[:50]}")
+                print(f"Error: {error_msg[:50]}")
                 time.sleep(DELAY_ON_ERROR)
             
             # Add error entry
@@ -394,15 +394,15 @@ if __name__ == '__main__':
         print(f"   Google Sheet URL: {sheet_url}")
         
         write_to_google_sheet(worksheet, stock_data_list)
-        print(f"\n✅ Success! View your sheet at: {sheet_url}")
+        print(f"\nSuccess! View your sheet at: {sheet_url}")
         
     except Exception as e:
-        print(f"\n❌ Error writing to Google Sheet: {e}")
+        print(f"\nError writing to Google Sheet: {e}")
         if sheet_url:
-            print(f"\n⚠️  Sheet was created/accessed but write failed. Try accessing it at:")
+            print(f"\nSheet was created/accessed but write failed. Try accessing it at:")
             print(f"   {sheet_url}")
         else:
-            print(f"\n📋 To find your sheet manually:")
+            print(f"\nTo find your sheet manually:")
             print(f"   1. Go to https://drive.google.com")
             print(f"   2. Search for: '{GOOGLE_SHEET_NAME}'")
             print(f"   3. Or look in 'Shared with me' or 'My Drive'")

@@ -14,7 +14,7 @@
 1. Delete any existing code in the editor
 2. Copy the entire contents of `StockAnalysis_GoogleAppsScript.gs`
 3. Paste it into the Apps Script editor
-4. Click **Save** (💾 icon) or press `Ctrl+S`
+4. Click **Save** or press `Ctrl+S`
 5. Name your project (e.g., "Stock Analysis")
 
 ### Step 4: Set Up Your Symbol List
@@ -38,7 +38,7 @@
 
 **Option B: From Apps Script Editor**
 1. In the Apps Script editor, select the function `updateStockAnalysis` from the dropdown
-2. Click the **Run** button (▶️)
+2. Click the **Run** button
 3. Authorize the script when prompted (first time only)
 
 ### Step 6: Authorize the Script (First Time Only)

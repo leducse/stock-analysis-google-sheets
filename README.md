@@ -4,15 +4,15 @@ An automated stock analysis tool that calculates technical indicators (SMAs and 
 
 ## Features
 
-- 📊 **Technical Indicators**: Calculates 20-day, 50-day, and 200-day Simple Moving Averages (SMA)
-- 📈 **RSI Analysis**: Computes 14-period Relative Strength Index
-- 🎯 **Buy/Sell Signals**:
+- **Technical Indicators**: Calculates 20-day, 50-day, and 200-day Simple Moving Averages (SMA)
+- **RSI Analysis**: Computes 14-period Relative Strength Index
+- **Buy/Sell Signals**:
   - **Buy Opportunity**: RSI < 30 AND Current Price > 200-day SMA
   - **Sell Opportunity**: RSI > 70
-- 📋 **Google Sheets Integration**: Automatically writes formatted results to Google Sheets
-- 🔄 **Batch Processing**: Handles large stock lists with rate limiting protection
-- ⏰ **Scheduled Updates**: Can be automated to run daily after market close
-- 📧 **Email Notifications**: Optional email alerts when analysis completes
+- **Google Sheets Integration**: Automatically writes formatted results to Google Sheets
+- **Batch Processing**: Handles large stock lists with rate limiting protection
+- **Scheduled Updates**: Can be automated to run daily after market close
+- **Email Notifications**: Optional email alerts when analysis completes
 
 ## Project Structure
 
